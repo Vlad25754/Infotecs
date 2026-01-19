@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { LoginPage } from "@/pages/login/LoginPage";
 import { UsersPage } from "@/pages/users/UsersPage";
 import { isAuthed } from "@/shared/lib/authStorage";
+import { NotFoundPage } from "@/pages/not-found/NotFoundPage";
 
 function RequireAuth(props: { children: JSX.Element }): JSX.Element {
   if (!isAuthed()) return <Navigate to="/login" replace />;
@@ -36,7 +37,7 @@ export function AppRouter(): JSX.Element {
       />
 
       <Route path="/" element={<Navigate to="/users" replace />} />
-      <Route path="*" element={<Navigate to="/login" replace />} />
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 }
