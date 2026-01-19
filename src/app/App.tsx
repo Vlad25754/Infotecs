@@ -1,12 +1,12 @@
 import React from "react";
-import { Button } from "antd";
+import { BrowserRouter } from "react-router-dom";
+import { AppRouter } from "./providers/router";
 import "antd/dist/reset.css";
 
 export function App(): JSX.Element {
   return (
-    <div style={{ padding: 24 }}>
-     
-      <Button type="primary">Клик</Button>
-    </div>
+    <BrowserRouter>
+      <AppRouter />
+    </BrowserRouter>
   );
 }
