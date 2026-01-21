@@ -10,8 +10,7 @@ const Page = styled.div`
 
 const TopBar = styled.div`
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  justify-content: end;
   margin-bottom: 12px;
 `;
 
@@ -24,7 +23,7 @@ const Name = styled.div`
 `;
 
 const Meta = styled.div`
-  color: rgba(0, 0, 0, 0.45);
+  color: gray;
   font-size: 13px;
 `;
 

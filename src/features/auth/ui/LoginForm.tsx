@@ -7,6 +7,10 @@ import { useLogin } from "../model/useAuth";
 const Page = styled.div`
   min-height: 100vh;
   background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 `;
 
 const Wrap = styled.div`
@@ -49,7 +53,6 @@ export function LoginForm(): JSX.Element {
 
   return (
     <Page>
-      <Wrap>
         <FormBlock>
           <Title level={5}>Авторизация</Title>
 
@@ -86,7 +89,6 @@ export function LoginForm(): JSX.Element {
             </RowRight>
           </Form>
         </FormBlock>
-      </Wrap>
     </Page>
   );
 }
